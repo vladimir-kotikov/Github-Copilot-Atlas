@@ -1,6 +1,6 @@
 ---
 description: 'Execute implementation tasks delegated by the CONDUCTOR agent.'
-tools: ['edit', 'search', 'runCommands', 'runTasks', 'usages', 'problems', 'changes', 'testFailure', 'fetch', 'githubRepo', 'todos', 'agent']
+tools: [vscode/memory, execute/testFailure, execute/getTerminalOutput, execute/awaitTerminal, execute/killTerminal, execute/createAndRunTask, execute/runInTerminal, execute/runTests, read/problems, read/readFile, read/terminalSelection, read/terminalLastCommand, agent, edit, search, web, vlkoti.scratch-code/list_scratches, vlkoti.scratch-code/read_scratch, vlkoti.scratch-code/write_scratch, vlkoti.scratch-code/rename_scratch, todo]
 model: Claude Sonnet 4.5 (copilot)
 ---
 You are an IMPLEMENTATION SUBAGENT. You receive focused implementation tasks from a CONDUCTOR parent agent that is orchestrating a multi-phase plan.

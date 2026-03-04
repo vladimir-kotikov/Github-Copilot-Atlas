@@ -1,6 +1,6 @@
 ---
 description: 'Autonomous planner that writes comprehensive implementation plans and feeds them to Atlas'
-tools: ['edit', 'search', 'usages', 'problems', 'changes', 'testFailure', 'fetch', 'githubRepo', 'runSubagent']
+tools: [vscode/memory, execute/testFailure, read/problems, read/readFile, agent, edit, search, web, todo]
 model: GPT-5.2 (copilot)
 handoffs:
   - label: Start implementation with Atlas
@@ -89,7 +89,7 @@ You must actively manage your context window by delegating research tasks:
 <subagent_instructions>
 **When invoking subagents for research:**
 
-**Explorer-subagent**: 
+**Explorer-subagent**:
 - Provide a crisp exploration goal (what you need to locate/understand)
 - Use for rapid file/usage discovery (especially when >10 files involved)
 - Invoke multiple Explorers in parallel for different domains/subsystems if needed
@@ -176,7 +176,7 @@ Write a comprehensive plan file to `<plan-directory>/<task-name>-plan.md` (using
 
 ## Open Questions
 
-1. {Question}? 
+1. {Question}?
    - **Option A:** {approach with tradeoffs}
    - **Option B:** {approach with tradeoffs}
    - **Recommendation:** {your suggestion with reasoning}
@@ -248,4 +248,3 @@ Write a comprehensive plan file to `<plan-directory>/<task-name>-plan.md` (using
 - If you need more context during planning, either research it yourself OR delegate to Explorer/Oracle
 - Do NOT pause for user input during research phase
 - Present completed plan with all options/recommendations analyzed
-

@@ -1,6 +1,6 @@
 ---
 description: 'Orchestrates Planning, Implementation, and Review cycle for complex tasks'
-tools: ['vscode/getProjectSetupInfo', 'vscode/installExtension', 'vscode/newWorkspace', 'vscode/openSimpleBrowser', 'vscode/runCommand', 'vscode/askQuestions', 'vscode/switchAgent', 'vscode/vscodeAPI', 'vscode/extensions', 'execute/runNotebookCell', 'execute/testFailure', 'execute/getTerminalOutput', 'execute/awaitTerminal', 'execute/killTerminal', 'execute/runTask', 'execute/createAndRunTask', 'execute/runInTerminal', 'execute/runTests', 'read/problems', 'read/readFile', 'read/terminalSelection', 'read/terminalLastCommand', 'read/getTaskOutput', 'agent', 'edit/createDirectory', 'edit/createFile', 'edit/createJupyterNotebook', 'edit/editFiles', 'edit/editNotebook', 'search/changes', 'search/codebase', 'search/fileSearch', 'search/listDirectory', 'search/searchResults', 'search/textSearch', 'search/usages', 'search/searchSubagent', 'web/fetch', 'web/githubRepo', 'todo']
+tools: [vscode/getProjectSetupInfo, vscode/installExtension, vscode/newWorkspace, vscode/runCommand, vscode/vscodeAPI, vscode/extensions, execute, read/problems, read/readFile, read/terminalSelection, read/terminalLastCommand, agent, edit/createDirectory, edit/createFile, edit/createJupyterNotebook, edit/editFiles, edit/editNotebook, search, web, vlkoti.scratch-code/list_scratches, vlkoti.scratch-code/read_scratch, vlkoti.scratch-code/write_scratch, vlkoti.scratch-code/rename_scratch, todo]
 agents: ["*"]
 model: Claude Sonnet 4.5 (copilot)
 ---
@@ -53,7 +53,7 @@ You must actively manage your context window by delegating appropriately:
 
 1. **Analyze Request**: Understand the user's goal and determine the scope.
 
-2. **Delegate Exploration (Context-Aware)**: 
+2. **Delegate Exploration (Context-Aware)**:
    - If task touches >5 files or multiple subsystems: ALWAYS use #runSubagent invoke Explorer-subagent first
    - Use its <results> to avoid loading unnecessary context yourself
    - Use Explorer's <files> list to decide what Oracle should research in depth
@@ -84,13 +84,13 @@ For each phase in the plan, execute this cycle:
 1. Use #runSubagent to invoke the appropriate implementation subagent:
    - **Sisyphus-subagent** for backend/core logic implementation
    - **Frontend-Engineer-subagent** for UI/UX, styling, and frontend features
-   
+
    Provide:
    - The specific phase number and objective
    - Relevant files/functions to modify
    - Test requirements
    - Explicit instruction to work autonomously and follow TDD
-   
+
 2. Monitor implementation completion and collect the phase summary.
 
 ### 2B. Review Implementation
@@ -145,7 +145,7 @@ For each phase in the plan, execute this cycle:
 
 When invoking subagents:
 
-**Oracle-subagent**: 
+**Oracle-subagent**:
 - Provide the user's request and any relevant context
 - Instruct to gather comprehensive context and return structured findings
 - Tell them NOT to write plans, only research and return findings

@@ -1,7 +1,7 @@
 ---
 description: Research context and return findings to parent agent
 argument-hint: Research goal or problem statement
-tools: ['search', 'usages', 'problems', 'changes', 'testFailure', 'fetch','agent']
+tools: [vscode/memory, execute/testFailure, read/problems, read/readFile, agent, search, web]
 model: GPT-5.2 (copilot)
 ---
 You are a PLANNING SUBAGENT called by a parent CONDUCTOR agent.
