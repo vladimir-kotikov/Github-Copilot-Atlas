@@ -3,6 +3,7 @@ description: Explore the codebase to find relevant files, usages, dependencies, 
 argument-hint: Find files, usages, dependencies, and context related to: <research goal or problem statement>
 tools: ['search', 'search/usages', 'read/problems', 'search/changes', 'execute/testFailure']
 model: Gemini 3 Flash (Preview) (copilot)
+user-invocable: false
 ---
 You are an EXPLORATION SUBAGENT called by a parent CONDUCTOR agent.
 

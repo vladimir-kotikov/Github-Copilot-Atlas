@@ -3,6 +3,7 @@ description: 'Frontend/UI specialist for implementing user interfaces, styling, 
 argument-hint: Implement frontend feature, component, or UI improvement
 tools: [vscode/memory, execute/testFailure, execute/getTerminalOutput, execute/awaitTerminal, execute/killTerminal, execute/createAndRunTask, execute/runInTerminal, execute/runTests, read/problems, read/readFile, read/terminalSelection, read/terminalLastCommand, edit, search, web, vlkoti.scratch-code/list_scratches, vlkoti.scratch-code/read_scratch, todo]
 model: Gemini 3 Pro (Preview) (copilot)
+user-invocable: false
 ---
 You are a FRONTEND UI/UX ENGINEER SUBAGENT called by a parent CONDUCTOR agent (Atlas).
 
