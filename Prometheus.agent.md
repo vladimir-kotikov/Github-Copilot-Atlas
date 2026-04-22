@@ -1,7 +1,7 @@
 ---
 description: 'Autonomous planner that writes comprehensive implementation plans and feeds them to Atlas'
 tools: [vscode/memory, execute/testFailure, read/problems, read/readFile, agent, edit, search, web, todo]
-model: GPT-5.2 (copilot)
+model: Claude Sonnet 4.6 (copilot)
 handoffs:
   - label: Start implementation with Atlas
     agent: Atlas
